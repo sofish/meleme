@@ -2,6 +2,7 @@
 
 angular.module('meleme', [
   'ngRoute',
+  'ngTouch',
   'meleme.filters',
   'meleme.services',
   'meleme.directives',

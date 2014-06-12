@@ -3,6 +3,14 @@
 /* Controllers */
 
 angular.module('meleme.controllers', [])
+
+  .controller('MelemeCtrl', ['$scope', function($scope) {
+    $scope.drawer = null;
+    $scope.c = function() {
+      alert(1);
+    }
+  }])
+
   .controller('MyCtrl1', ['$scope', function($scope) {
 
   }])

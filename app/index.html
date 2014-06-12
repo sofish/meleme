@@ -8,13 +8,13 @@
   <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
   <link rel="stylesheet" href="css/meleme.css"/>
 </head>
-<body class="drawer" ng-class="{'drawer-open': drawer}">
+<body class="drawer" ng-class="{'drawer-open': drawer}" ng-controller="MelemeCtrl">
   <ul class="drawer-side drawer-animate">
     <li><a href="#/view1" meleme-drawer=".drawer">view1</a></li>
     <li><a href="#/view2" meleme-drawer=".drawer">view2</a></li>
   </ul>
 
-  <div class="drawer-main drawer-animate" ng-swipe-left="drawer = 1">
+  <div class="drawer-main drawer-animate" ng-swipe-right="drawer = 1" ng-swipe-left="drawer = 0">
     <button class="drawer-trigger" meleme-drawer=".drawer"># MENU</button>
     <div ng-view></div>
   </div>
