@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="meleme">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Meleme</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+  <link rel="stylesheet" href="css/meleme.css"/>
+</head>
+<body class="drawer" ng-class="{'drawer-open': drawer}">
+  <ul class="drawer-side drawer-animate">
+    <li><a href="#/view1" meleme-drawer=".drawer">view1</a></li>
+    <li><a href="#/view2" meleme-drawer=".drawer">view2</a></li>
+  </ul>
+
+  <div class="drawer-main drawer-animate" ng-swipe-left="drawer = 1">
+    <button class="drawer-trigger" meleme-drawer=".drawer"># MENU</button>
+    <div ng-view></div>
+  </div>
+
+  <script src="libs/angular-1.2.17/angular.min.js"></script>
+  <script src="libs/angular-1.2.17/angular-route.min.js"></script>
+  <script src="libs/angular-1.2.17/angular-touch.min.js"></script>
+  <script src="js/meleme.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>
