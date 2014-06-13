@@ -50,8 +50,6 @@ angular.module('meleme.directives', [])
         var $target =  attrs.melemeDrawer ? angular.$(document.querySelectorAll(attrs.melemeDrawer)) : $el;
 
         $el.on('click', function(e) {
-          e.preventDefault();
-
           $target.toggleClass('drawer-open');
           [].slice.call(angular.$(document).find('[meleme-drawer]')).forEach(function(el){
             el.classList.toggle('active');
