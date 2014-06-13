@@ -1,5 +1,6 @@
 *{box-sizing: border-box;-moz-box-sizing: border-box;padding:0;margin:0;}
 a{text-decoration:none;}
+ul, ol{list-style:none;}
 
 /* Button */
 .button{border:none;background:#eee;color:#666;height:40px;padding:0 20px;text-align:center;line-height:39px;}
@@ -29,3 +30,9 @@ body{padding-top:88px;}
 .tab-content .tab-content-item{display:none;}
 .tab-content-item.active{display:block;}
 .tab-title .active{background:#3199e8;color:#fff;}
+
+/* Tab */
+.accordion{border-bottom:1px solid #ccc;}
+.accordion-pane{border:1px solid #ccc;border-bottom:none;padding:0.8em 1em;}
+.accordion-pane-body{display:none;}
+.accordion-pane.active .accordion-pane-body{display:block;}

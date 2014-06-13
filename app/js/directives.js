@@ -114,3 +114,18 @@ angular.module('meleme.directives', [])
       }
     }
   })
+
+  .directive('melemeAccordion', function() {
+    return {
+      restrict: 'A',
+      link: function(scope, $el, attrs) {
+
+        var $parent = $el.parent(attrs.melemeAccordion);
+
+        $el.on('click', function(e) {
+          e.preventDefault();
+          $parent.toggleClass('active');
+        })
+      }
+    }
+  })

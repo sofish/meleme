@@ -13,5 +13,6 @@ config(['$routeProvider', '$locationProvider', function($routeProvider, $locatio
 
   $routeProvider.when('/dropdown', {templateUrl: 'partials/dropdown.html', controller: 'DropdownCtrl'});
   $routeProvider.when('/tab', {templateUrl: 'partials/tab.html', controller: 'TabCtrl'});
+  $routeProvider.when('/accordion', {templateUrl: 'partials/accordion.html', controller: 'AccordionCtrl'});
   $routeProvider.otherwise({redirectTo: '/dropdown'});
 }]);

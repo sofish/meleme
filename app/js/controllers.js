@@ -11,6 +11,11 @@ angular.module('meleme.controllers', [])
   .controller('DropdownCtrl', ['$scope', function($scope) {
 
   }])
+
   .controller('TabCtrl', ['$scope', function($scope) {
 
-  }]);
+  }])
+
+  .controller('AccordionCtrl', ['$scope', function($scope) {
+
+  }])
