@@ -90,8 +90,8 @@ angular.module('meleme.directives', [])
   /* Tab 切换
    * Example:
    *   0. <button melemeTab="#ID">显示拥有 #ID 的元素</button>
-   *   1. 不指定 SELECTOR 时，在按钮的父节点加上 `dropdown-open` 这个 class
-   *   2. 指定或者有 href="SELECTOR" 的时候，在 SELECTOR 上加 `dropdown-open` 这个 class
+   *   1. 不指定 #ID 时，在按钮的父节点加上 `dropdown-open` 这个 class
+   *   2. 指定或者有 href="#ID" 的时候，在本身或者 #ID 上加 `dropdown-open` 这个 class
    */
   .directive('melemeTab', function() {
     return {
@@ -115,6 +115,12 @@ angular.module('meleme.directives', [])
     }
   })
 
+  /* Accordion 显示
+   * Example:
+   *   0. <button melemeAccordion="SELECTOR">SELECTOR</button>
+   *   1. 不指定 SELECTOR 时，在按钮的父节点加上 `active` 这个 class
+   *   2. 指定的时候，在 SELECTOR 上加 `active` 这个 class
+   */
   .directive('melemeAccordion', function() {
     return {
       restrict: 'A',
