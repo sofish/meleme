@@ -1,9 +1,8 @@
 'use strict';
 
-
 angular.$ = angular.element;
 
-// 扩展自带 jqLite 的 parent 方法，支持 selector
+// jqLite `.parent()` 支持 selector
 angular.$.prototype.parent = function(sel) {
   if(!sel) return angular.$(this[0].parentNode);
   var list = [].slice.call(document.querySelectorAll(sel))
@@ -22,9 +21,9 @@ angular.$.prototype.parent = function(sel) {
   return angular.$(ret);
 }
 
-// 扩展自带 jqLite 的 parent 方法，支持 selector
+// jqLite `.find()` 支持 selector
 angular.$.prototype.find = function(sel) {
-  if(!sel) return this;
+  if(!sel) return angular.$();
   var list = [].slice.call(document.querySelectorAll(sel))
     , childrens = [].slice.call(this[0].getElementsByTagName('*'))
     , ret = [];
