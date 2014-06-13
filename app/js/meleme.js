@@ -8,8 +8,10 @@ angular.module('meleme', [
   'meleme.directives',
   'meleme.controllers'
 ]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  //$locationProvider.html5Mode(true);
+
+  $routeProvider.when('/dropdown', {templateUrl: 'partials/dropdown.html', controller: 'DropdownCtrl'});
+  $routeProvider.when('/tab', {templateUrl: 'partials/tab.html', controller: 'TabCtrl'});
+  $routeProvider.otherwise({redirectTo: '/dropdown'});
 }]);

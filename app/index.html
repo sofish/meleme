@@ -10,12 +10,14 @@
 </head>
 <body class="drawer" ng-class="{'drawer-open': drawer}" ng-controller="MelemeCtrl">
   <ul class="drawer-side drawer-animate">
-    <li><a href="#/view1" meleme-drawer=".drawer">view1</a></li>
-    <li><a href="#/view2" meleme-drawer=".drawer">view2</a></li>
+    <li><a href="#/dropdown" meleme-drawer=".drawer">Dropdown</a></li>
+    <li><a href="#/tab" meleme-drawer=".drawer">Tab</a></li>
   </ul>
 
-  <div class="drawer-main drawer-animate" ng-swipe-right="drawer = 1" ng-swipe-left="drawer = 0">
-    <button class="drawer-trigger" meleme-drawer=".drawer"># MENU</button>
+  <div class="drawer-main drawer-animate">
+    <header class="header">
+      <button class="drawer-trigger button" meleme-drawer=".drawer" ng-class="{'button-active': drawer}"># MENU</button>
+    </header>
     <div ng-view></div>
   </div>
 

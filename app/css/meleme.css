@@ -1,14 +1,31 @@
 *{box-sizing: border-box;-moz-box-sizing: border-box;padding:0;margin:0;}
 a{text-decoration:none;}
 
-/* 抽屉式 menu */
+/* Button */
+.button{border:none;background:#eee;color:#666;height:40px;padding:0 20px;text-align:center;line-height:39px;}
+.button.active{background:#666;color:#fff;}
+
+/* Header */
+body{padding-top:88px;}
+.header{background:#3199e8;height:88px;width:100%;position:fixed;z-index:999;top:0;left:0;-moz-transition:left 0.3s ease;-o-transition:left 0.3s ease;transition:left 0.3s ease;}
+.drawer-open .header{left:80%;}
+
+/* 抽屉式 Menu */
 .drawer{width:100%;height:100%;overflow:hidden;}
 .drawer-side, .drawer-main{-webkit-transition:left 0.3s ease;-moz-transition:left 0.3s ease;-o-transition:left 0.3s ease;transition:left 0.3s ease;}
-.drawer-trigger{border:none;background:#eee;color:#666;height:40px;width:90px;text-align:center;line-height:29px;}
-.drawer-open .drawer-trigger{background:#666;color:#fff;}
-.drawer-side{display:block;position:absolute;width:80%;left:-80%;box-shadow:0 -5px 0 #ddd;height:100%;background:#555;box-shadow:inset 0 0 2px #000;}
+.drawer-side{display:block;position:absolute;width:80%;top:0;left:-80%;height:100%;background:#555;border-right:1px solid #555;}
 .drawer-main{position:relative;left:0;width:100%;padding:1em 1.2em;}
 .drawer-open .drawer-side{left:0;}
 .drawer-open .drawer-main{left:80%;position:fixed;}
 .drawer-side li a{display:block;padding:1em 1.2em;background:#666;color:#fff;margin-bottom:1px;}
 .drawer-side li a:hover{background:#444;}
+
+/* Dropdown */
+.dropdown{position:relative;}
+.dropdown-menu{position:absolute;display:none;}
+.dropdown-open .dropdown-menu{display:block;min-width:150px;}
+
+/* Tab */
+.tab-content .tab-content-item{display:none;}
+.tab-content-item.active{display:block;}
+.tab-title .active{background:#3199e8;color:#fff;}
